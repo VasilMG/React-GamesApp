@@ -33,3 +33,12 @@ export const edit = async (gameId, gameData) => {
 
     return result;
 }
+
+export const getLatest = async () => {
+
+    const query = encodeURIComponent(`offset=0&pageSize=3`);
+    console.log(query);
+    const result = await request.get(`${baseUrl}?sortBy=_createdOn%20desc&${query}`);
+
+    return result;
+}
