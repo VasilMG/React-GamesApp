@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useMemo } from "react";
 import { AuthContext } from "../../contexts/authContext";
 import { useForm } from "../../hooks/useForm";
 
@@ -11,11 +11,13 @@ const RegisterFormKeys = {
 export default function Register() {
     const {registerSubmitHandler} = useContext(AuthContext);
 
-    const {values, onChange, onSubmit} = useForm(registerSubmitHandler, {
+    const initialFormValues = useMemo(() => ({
         [RegisterFormKeys.Email]: '',
         [RegisterFormKeys.Password]: '',
         [RegisterFormKeys.ConfirmPassword]: '',
-    })
+    }), [])
+
+    const {values, onChange, onSubmit} = useForm(registerSubmitHandler, initialFormValues)
 
 
     return (

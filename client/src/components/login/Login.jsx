@@ -1,5 +1,5 @@
 // import { useEffect } from "react";
-import { useContext } from "react";
+import { useContext, useMemo } from "react";
 import { useForm } from "../../hooks/useForm";
 import {AuthContext} from "../../contexts/authContext";
 
@@ -12,10 +12,13 @@ export default function Login() {
         Password: 'password'
     }
 
-    const {values, onChange, onSubmit} = useForm(loginSubmitHandler, {
+
+    const initialFormValues = useMemo(() => ({
         [LoginFormNames.Email]: '',
         [LoginFormNames.Password]: '',
-    });
+    }), [])
+
+    const {values, onChange, onSubmit} = useForm(loginSubmitHandler, initialFormValues);
 
 
     return (
