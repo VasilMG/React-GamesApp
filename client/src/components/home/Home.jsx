@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import withAuth from "../../HOC/withAuth";
+import {withAuth} from "../../HOC/withAuth";
 import * as gameService from '../../services/gameService';
-import LatestGame from "./latest-game/LatestGame";
+import LatestGame from './latestGame/LatestGame'
 
 function Home({
     _id,

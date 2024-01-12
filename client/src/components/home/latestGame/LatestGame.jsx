@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Path from "../../../paths";
-import { pathToUrl } from "../../../utils/pathUtils";
+import {pathUrl} from '../../../utils/pathUtils'
 
 export default function LatestGame({
     _id,
@@ -17,7 +17,7 @@ export default function LatestGame({
                 <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
             </div>
             <div className="data-buttons">
-                <Link to={pathToUrl(Path.GameDetails, { gameId: _id })} className="btn details-btn">Details</Link>
+                <Link to={pathUrl(Path.GameDetails, { gameId: _id })} className="btn details-btn">Details</Link>
             </div>
         </div>
     );
