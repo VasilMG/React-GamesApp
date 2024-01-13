@@ -1,5 +1,5 @@
 # React-GamesApp
-Simple frontend application for games with practice server included.</br></br>
+Example React application for games with practice server included.</br></br>
 
 ## Run the app
 - Clone the repo
