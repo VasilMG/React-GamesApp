@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-import * as authServices from '../../services/authServices'
+// import * as authServices from '../../services/authServices'
+import * as authServices from '../../services/authService'
 import Path from '../../paths';
 import { AuthContext } from '../../contexts/authContext';
 

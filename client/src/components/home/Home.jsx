@@ -3,11 +3,13 @@ import {withAuth} from "../../HOC/withAuth";
 import * as gameService from '../../services/gameService';
 import LatestGame from './latestGame/LatestGame'
 
-function Home({
-    _id,
-    accessToken,
-    email,
-}) {
+function Home(
+//     {
+//     _id,
+//     accessToken,
+//     email,
+// }
+) {
     const [latestGames, setLatestGames] = useState([]);
 
     useEffect(() => {

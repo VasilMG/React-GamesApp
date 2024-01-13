@@ -80,6 +80,9 @@ export default function GameDetails() {
                     {comments.map(comment => (
                         <li key={comment._id} className="comment">
                         <p>{comment.owner.email}: {comment.text}</p>
+                        {/* {comment.owner.email ? 
+                        <p>{comment.owner.email}: 
+                        {comment.text}</p> : <p>Guest: {comment.text}</p> } */}
                     </li>
 
                     ))}
