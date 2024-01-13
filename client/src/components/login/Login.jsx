@@ -16,7 +16,7 @@ export default function Login() {
     const initialFormValues = useMemo(() => ({
         [LoginFormNames.Email]: '',
         [LoginFormNames.Password]: '',
-    }), [])
+    }), [LoginFormNames.Email, LoginFormNames.Password])
 
     const {values, onChange, onSubmit} = useForm(loginSubmitHandler, initialFormValues);
 

@@ -42,3 +42,7 @@ export const getLatest = async () => {
 
     return result;
 }
+
+export const remove = async (gameId) => {
+    request.remove(`${baseUrl}/${gameId}`);
+}

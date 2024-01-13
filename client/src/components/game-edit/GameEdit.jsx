@@ -4,7 +4,13 @@ import * as gameService from "../../services/gameService";
 import { useNavigate, useParams } from "react-router-dom"
 
 export default function GameEdit() {  
-    const [game, setGame] = useState({});
+    const [game, setGame] = useState({
+        title: '',
+        category: '',
+        maxLevel: '',
+        imageUrl: '',
+        summary: '',
+    });
     const navigate = useNavigate();
     const {gameId} = useParams()
 
