@@ -48,7 +48,7 @@ export default function GameEdit() {
 
                 <label htmlFor="summary">Summary:</label>
                 <textarea name="summary" onChange={onChange} value={values.summary} id="summary"></textarea>
-                <input className="btn submit" type="submit" value="Edit Game" />
+                <input className="btn submit" type="submit" value="Edit Game"/>
             </div>
         </form>
     </section>

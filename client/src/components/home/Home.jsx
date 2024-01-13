@@ -27,11 +27,11 @@ function Home({
             <div id="home-page">
                 <h1>Latest Games</h1>
 
-                {latestGames.map(game => <LatestGame {...game} />)}
+                {latestGames.map(game => <LatestGame key={game._id} {...game} />)}
 
                 {!latestGames.length && <p className="no-articles">No games yet</p>}
 
-                <p>{email}</p>
+                {/* <p>{email}</p> */}
             </div>
         </section>
     );
